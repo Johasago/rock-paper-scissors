@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+        
+        <title>Rock, Paper, Scissors</title>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid text-center"> 
+            <div class="container-fluid">
+            <h1>Let's play Rock, Paper, Scissors!</h1>
+            <h3>Player, make your move:</h3>
+            </div>
+            </div>
+            <div class="container">
+                <div class="row">
+            <div class="col"> 
+                <div class="thumbnail">
+                    <a href="javascript:play(0)"> 
+                        <img src="rock.jpg" class="img-responsive" id= "rock" alt="Rock" style="width: 100%"> </a>
+                </div></div>
+            <div class="col">
+                <div class="thumbnail">
+                <a href="javascript:play(1)"> 
+                    <img src="paper.jpg" class="img-responsive" id="paper" alt="Paper" style="width: 100%"> </a>
+            </div></div>
+        <div class="col">
+            <div class="thumbnail">
+            <a href="javascript:play(2)"> 
+                <img src="scissors.jpg" class="img-responsive" id="scissors" alt="Scissors" style="width: 100%"> </a>
+        </div> </div>
+                </div>
+            </div>
+           <div class="container">
+        <h4 id="result"><br/></h4>
+        
+        <button id="reset" hidden>PLAY AGAIN</button>
+        </div>
+    <script>
+    function play(strChoice) {
+    var xhttp;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("result").innerHTML = this.responseText;
+    }
+    };
+    xhttp.open("GET", "GameFunctions.php?choice="+strChoice, true);
+    xhttp.send();
+   };
+    </script>
+    
+    
+    <script src="Funstuff.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

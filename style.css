@@ -1,0 +1,34 @@
+                body {
+                    font-family: Kalam; 
+                    margin: auto;
+                    background-color: black;
+                    color: red;
+               }  
+        
+           
+               .jumbotron 
+               {
+                 text-align: center;
+                 background-color: red;
+                 color: black; 
+                 max-height: 200px;
+
+               }
+               
+               .thumbnail {
+                                vertical-align: top;
+                                display: inline-block;
+                                text-align: center;
+                                width: 100%;
+}
+            
+               h4 {
+               
+                 color: red;
+                 display: box;
+               }
+               
+               button {
+                   
+                   background-color: red;
+               }  
